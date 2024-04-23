@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Product Sans";
+}
+
+/* Pushes "right" far right */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* button adjustments */
+.header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+
+/* makes buttons horizontal */
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* centers days */
+.day {
+    text-align: center;
+    padding: 5px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
