@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Product Sans";
+}
+
+/* Pushes "right" far right */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;               /* Remove Bold */
+    margin:0.5em;
+}
+
+/* button adjustments */
+.header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+
+/* makes days horizontal */
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+
+/* centers days */
+.day {
+    text-align: center;
+    padding: 5px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+table {
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+  
+td, th {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:normal;
+    border: 2px solid #606060;
+    text-align: center;
+    padding: 30px 10px 30px 10px;
+    height: 80px;
+}
+
+#month{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="calendar.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Font-->
+    <title>Calendar</title>
+</head>
+<script>
+    // Get today's date and then set the day of the month to the 1st
+    var datecounter = new Date();
+    datecounter.setDate(1);
+</script>
+<body>
+
+    <h1 class = "title">Calendar</h1>
+    <br>
+    <hr>
+    <br>
+
+    <div class="Calendar">
+        <div class = "header">
+            <button onclick="decrementMonth(datecounter)" class="Previous">&lt;</button>
+            <h2 id="month">March</h3>
+            <button onclick="incrementMonth(datecounter)" class="Right">&gt;</button>
+        </div>
+
+        <div class = "days">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tues</div>
+            <div class="day">Wed</div>
+            <div class="day">Thurs</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+        </div>
+        <div class="dates" id = "dates">
+            <table id="datetable">
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+        <script>
+            function setCalendar(d){
+                var row = 0;
+                for(row; row < 6; row = row + 1){
+                    let Cell = document.getElementById("datetable").rows[row].cells;
+                    var col = 0;
+                    while(col < 7){
+                        Cell[col].innerHTML = "";
+                        col = col + 1;
+                    }
+                    dayNumber = 0;
+                    
+                }
+
+                var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+                
+                // Get the day of the week
+                var dayNumber = d.getDay()
+
+                /*var todayD = d.getDate()
+                while(todayD > 1){
+                    todayD = todayD - 1;
+                    if(dayNumber > 0){
+                        dayNumber = dayNumber - 1;
+                    }
+                    else{
+                        dayNumber = 6;
+                    }
+                } */
+                var row = 0;
+                var date = 1;
+                var month = d.getMonth();
+                var year = d.getFullYear();
+                for(row; row < 6; row = row + 1){
+                    let Cell = document.getElementById("datetable").rows[row].cells;
+                    while(dayNumber < 7 && ((month==1 && year%4==0) ? date <= 29 : date <= daysPerMonth[month])){
+                        Cell[dayNumber].innerHTML = date;
+                        date = date + 1;
+                        dayNumber = dayNumber + 1;
+                    }
+                    dayNumber = 0;
+                    
+                }
+
+                let monthElement = document.getElementById("month");
+                monthElement.innerHTML = monthsOfYear[month];
+            }
+
+            function incrementMonth(d){
+                if(d.getMonth == 11){
+                    d.setFullYear(d.getFullYear()+1, 0);
+                }
+                else{
+                    d.setMonth(d.getMonth()+1);
+                }
+                setCalendar(d);
+            }
+
+            function decrementMonth(d){
+                if(d.getMonth == 0){
+                    d.setFullYear(d.getFullYear()-1, 11);
+                }
+                else{
+                    d.setMonth(d.getMonth()-1);
+                }
+                setCalendar(d);
+            }
+
+            setCalendar(datecounter);
+            
+          </script>
+
+    </div>
+    
+</body>
+</html>
