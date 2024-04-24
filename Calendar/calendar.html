@@ -24,12 +24,15 @@
     <br>
 
     <div class="Calendar">
+        <!-- Displays year, month, and prev/next buttons -->
+        <h1 id="year">2024</h1>                    
         <div class = "header">
             <button onclick="decrementMonth(datecounter)" class="Previous">&lt;</button>
-            <h2 id="month">March</h3>
+            <h2 id="month">March</h2>
             <button onclick="incrementMonth(datecounter)" class="Right">&gt;</button>
         </div>
 
+        <!-- Days at the top of the Calendar -->
         <div class = "days">
             <div class="day">Sun</div>
             <div class="day">Mon</div>
@@ -39,6 +42,8 @@
             <div class="day">Fri</div>
             <div class="day">Sat</div>
         </div>
+
+        <!-- I think this is the structure of the Calendar -->
         <div class="dates" id = "dates">
             <table id="datetable">
                 <tr>
@@ -97,6 +102,9 @@
                 </tr>
             </table>
         </div>
+        <!-- Calendar Structure end -->
+
+        <!-- Prev and Next Button Functionality -->
         <script>
             function setCalendar(d){
                 var row = 0;
@@ -143,8 +151,11 @@
                     
                 }
 
+                // Changes value of month and year headers
                 let monthElement = document.getElementById("month");
                 monthElement.innerHTML = monthsOfYear[month];
+                let yearElement = document.getElementById("year");
+                yearElement.innerHTML = year;
             }
 
             function incrementMonth(d){
