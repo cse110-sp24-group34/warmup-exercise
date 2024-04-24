@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <title>Sentiment Rating Widget</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="brandlogo.png" type="image/png">
 </head>
 <body>
     <div class="rating-widget">
         <p>Select your sentiment rating:</p>
         <div id="ratings">
-            <span class="rating" data-value="1">😠</span>
-            <span class="rating" data-value="2">😟</span>
-            <span class="rating" data-value="3">😐</span>
-            <span class="rating" data-value="4">🙂</span>
-            <span class="rating" data-value="5">😀</span>
+            <div class="rating" data-value="1">
+                <span>😠</span>
+                <p>Very Unhappy</p>
+            </div>
+            <div class="rating" data-value="2">
+                <span>😟</span>
+                <p>Unhappy</p>
+            </div>
+            <div class="rating" data-value="3">
+                <span>😐</span>
+                <p>Neutral</p>
+            </div>
+            <div class="rating" data-value="4">
+                <span>🙂</span>
+                <p>Happy</p>
+            </div>
+            <div class="rating" data-value="5">
+                <span>😀</span>
+                <p>Very Happy</p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
