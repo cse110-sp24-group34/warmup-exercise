@@ -7,8 +7,11 @@
 
 ## To-do:
 [] comment code functionality
+
 [x] implement into web browser
+
 [] record video
+
 ## SWOT Analysis
 
 ### Strengths
