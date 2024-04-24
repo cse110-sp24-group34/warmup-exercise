@@ -1,0 +1,15 @@
+.rating-widget {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.rating {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.rating:hover {
+    background-color: #f0f0f0;
+}

@@ -1,3 +1,2 @@
-# cse110-sp24-group34
-
-**[short description of project]**
+# warmup-exercise
+Warmup Exercise - Team and Technology DeRisk
