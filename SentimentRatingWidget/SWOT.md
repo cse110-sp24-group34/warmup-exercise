@@ -6,11 +6,9 @@
 - **Review Phase:** Regular code reviews were conducted to maintain code quality and integrate different parts seamlessly. All code is commented based on functionality.
 
 ## To-do:
-[] comment code functionality
-
-[x] implement into web browser
-
-[] record video
+- [ ] comment code functionality
+- [x] implement into web browser
+- [ ] record video
 
 ## SWOT Analysis
 
