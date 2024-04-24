@@ -2,14 +2,13 @@
 
 ## Process Review
 - **Planning Phase:** The team efficiently established roles and responsibilities based on individual skills. Our team consists of Derrick, Austin, and Neo.
-- **Development Phase:** Planned ...
+- **Development Phase:** Framework of basic Widget completed first with additions in style and features later on.
 - **Review Phase:** Regular code reviews were conducted to maintain code quality and integrate different parts seamlessly. All code is commented based on functionality.
 
 ## To-do:
-- comment code functionality
-- implement into web browser
-- record video
-- 
+- [] comment code functionality
+- [x] implement into web browser
+- [] record video
 ## SWOT Analysis
 
 ### Strengths
@@ -23,9 +22,10 @@
 ### Opportunities
 - **Skill Development:** This project provides an excellent opportunity for all team members, especially beginners, to enhance their coding skills in a real-world scenario.
 - **Process Improvement:** Future projects can benefit from the learnings of this one, particularly in refining the agile methodologies used.
+- **Timeline Improvemnts:** Learning from this project to better estimate the time each phase will take the team.
 
 ### Threats
-- 
+- **Critical team member sick:** Due to the uneven level of skill team members had with technologies like JavaScript, having the few team members that are competent in JS sick could heavily hinder progress.
 - 
 
 ## Summary of Learnings
