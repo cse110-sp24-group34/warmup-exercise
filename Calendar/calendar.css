@@ -15,7 +15,7 @@
 
 .title {
     font-family: "Poppins", sans-serif;
-    font-weight: normal;               /* Remove Bold */
+    font-weight: normal;
     margin:0.5em;
 }
 
@@ -44,9 +44,9 @@
 
 /* centers days */
 .day {
-    text-align: center;
+    text-align: center ;
     padding: 5px;
-    color: black;
+    color:rgb(51, 47, 47);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
@@ -62,9 +62,9 @@ table {
 td, th {
     font-family: 'Courier New', Courier, monospace;
     font-weight:normal;
-    border: 2px solid #606060;
+    border: 2px solid rgba(96, 96, 96, .6);
     text-align: center;
-    padding: 30px 10px 30px 10px;
+    padding: 20px 150px 150px 10px;
     height: 80px;
 }
 
@@ -72,6 +72,14 @@ td, th {
     text-align: center;
     font-family: "Poppins", sans-serif;
 }
+
+
+.prevMonth {
+    color: #b9b7b7;
+}
+
+
+
 
 #year {
     font-family: "Poppins", sans-serif;
