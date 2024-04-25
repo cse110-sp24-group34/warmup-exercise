@@ -1,5 +1,5 @@
 # Project Review and SWOT Analysis
-<!-- Press Ctrl + Shift + V to view the Markdown file -->
+<!-- Press Ctrl + Shift + V to view the Markdown file in VSCode -->
 ## Process Review
 - **Planning Phase:** Our team consists of Sumukh, Mauricio,  Ryan, Jeffery,  Can. We decided to delegate based on what we felt we could maximise efficiency.
 - **Development Phase:** 

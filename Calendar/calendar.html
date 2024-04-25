@@ -138,9 +138,9 @@
                     let Cell = document.getElementById("datetable").rows[row].cells;
                     while(dayNumber < 7 && ((month==1 && year%4==0) ? date <= 29 : date <= daysPerMonth[month])){
                         // check day, leap year
-                        if( month != d.getMonth()  ){
-                            Cell[dayNumber].innerHTML = <p style = "color:Tomato"></p>;
-                        }
+                        // if( month != d.getMonth()  ){
+                        //     Cell[dayNumber].innerHTML = <p style = "color:Tomato"></p>;
+                        // }
                         // the cells change on the date number
                         Cell[dayNumber].innerHTML = date;
                         date = date + 1;
