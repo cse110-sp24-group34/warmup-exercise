@@ -47,6 +47,8 @@ function setCalendar(d){
 
     let monthElement = document.getElementById("month");
     monthElement.innerHTML = monthsOfYear[month];
+    let yearElement = document.getElementById("year");
+    yearElement.innerHTML = year;
 }
 
     
