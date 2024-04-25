@@ -9,26 +9,29 @@
 
 ## To-do:
 - [x] Implement the table
-- [x] Keep track of current date, put into calculator
-- [ ] Add the Touch Grass Logo ![Our Logo](Calendar\TG_LOGO.png )
+- [x] Keep track of current date, put into Calendar
+- [X] Add the Touch Grass Logo !
 - [ ] Make the dates clickable!
 - [x] Add a button that changes month (i.e, left and right)
 - [x] Leap years... 
 - [X] Implement some CSS!
+- [ ] Implement removing bottom row if no dates?
+
 <!-- 
-- [ ]
-- [ ]
 - [ ]
 - [ ]
  -->
 ## SWOT Analysis
 
 ### Strengths
-- **Team Collaboration:** Strong communication and collaborative problem-solving skills were evident, leading to effective troubleshooting and innovation (Took ideas from 4/18 lecture).
-- **Adaptability:** We had discussed our unfamiliarity with JavaScript, but quickly set out to improve our knowledge with tutorials online and traded tips and advice when we were stuck.
+- **Team Collaboration:** 
+  <!-- Strong communication and collaborative problem-solving skills were evident, leading to effective troubleshooting and innovation (Took ideas from 4/18 lecture). -->
+ **Adaptability:**
+  <!-- We had discussed our unfamiliarity with JavaScript, but quickly set out to improve our knowledge with tutorials online and traded tips and advice when we were stuck. -->
 
 ### Weaknesses
-- **Uneven Skill Distribution:** Some team members did not have great experience with CSS & JacaScript, which took longer than expected to assign everybdoy to appropiate parts.
+- **Uneven Skill Distribution:** 
+  <!-- Some team members did not have great experience with CSS & JacaScript, which took longer than expected to assign everybdoy to appropiate parts. -->
 - **Time Management:** 
   <!-- Initial phases took longer than expected, putting pressure on later stages of the project timeline. -->
 

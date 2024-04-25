@@ -54,20 +54,20 @@ function setCalendar(d){
     
 function incrementMonth(d){
     if(d.getMonth == 11){
-        d.setFullYear(d.getFullYear()+1, 0);
+        d.setFullYear(d.getFullYear() + 1, 0);
     }
     else{
-        d.setMonth(d.getMonth()+1);
+        d.setMonth(d.getMonth() + 1);
     }
     setCalendar(d);
 }
 
 function decrementMonth(d){
     if(d.getMonth == 0){
-        d.setFullYear(d.getFullYear()-1, 11);
+        d.setFullYear(d.getFullYear() - 1, 11);
     }
     else{
-        d.setMonth(d.getMonth()-1);
+        d.setMonth(d.getMonth() - 1);
     }
     setCalendar(d);
 }

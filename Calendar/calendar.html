@@ -15,17 +15,20 @@
 
 <body>
 
-    <h1 class = "title">Calendar</h1>
-    <br>
+    <h1 class = "CalendarTitle">
+        <a href="https://github.com/cse110-sp24-group34/warmup-exercise/tree/main/Calendar"><img src="..\Calendar\TGSolidIcon.png" alt="Project Touch Grass Logo" width = "40" height ="40"></a>
+        Calendar
+    </h1>
+    
     <hr>
     <br>
 
     <div class="Calendar">
         <h2 id="year">2024</h2>
         <div class = "header">
-            <button onclick="decrementMonth(datecounter)" class="Previous">&lt;</button>
-            <h2 id="month">March</h2>
-            <button onclick="incrementMonth(datecounter)" class="Right">&gt;</button>
+            <button onclick= decrementMonth(datecounter) id = "Previous" class="Previous">&lt;</button>
+            <h2 id="month">April</h2>
+            <button onclick= incrementMonth(datecounter) id = "Right" class="Right">&gt;</button>
         </div>
 
         <div class = "days">
@@ -94,9 +97,11 @@
                     <th></th>
                 </tr>
             </table>
+            <br>
+            <br>
         </div>
         <!-- Calendar Structure end -->
-
+       
         <!-- Prev and Next Button Functionality -->
         <script>
             function setCalendar(d){
@@ -136,20 +141,19 @@
                 var year = d.getFullYear();
                 for(row; row < 6; row = row + 1){
                     let Cell = document.getElementById("datetable").rows[row].cells;
-                    while(dayNumber < 7 && ((month==1 && year%4==0) ? date <= 29 : date <= daysPerMonth[month])){
-                        // check day, leap year
-                        // if( month != d.getMonth()  ){
-                        //     Cell[dayNumber].innerHTML = <p style = "color:Tomato"></p>;
-                        // }
-                        // the cells change on the date number
+                    while(dayNumber < 7 && ( (month == 1 && year % 4 == 0) ? date <= 29 : date <= daysPerMonth[month]) ){
+                        
+                       Cell[dayNumber].innerHTML = <a style = "color:Red"></a>;
+                        
+                        // The above code allows you to have previous dates in the calendar 
+                        // as another color
+                        // However, the current month will not load unless you the side arrows again
                         Cell[dayNumber].innerHTML = date;
                         date = date + 1;
                         dayNumber = dayNumber + 1;
                     }
                     dayNumber = 0;
-                    
                 }
-
                 // Changes value of month and year headers
                 let monthElement = document.getElementById("month");
                 monthElement.innerHTML = monthsOfYear[month];
@@ -157,8 +161,9 @@
                 yearElement.innerHTML = year;
             }
 
+
             function incrementMonth(d){
-                if(d.getMonth == 11){
+                if(d.getMonth() == 11){
                     d.setFullYear(d.getFullYear() + 1, 0);
                 }
                 else{
@@ -168,7 +173,7 @@
             }
 
             function decrementMonth(d){
-                if(d.getMonth == 0){
+                if(d.getMonth() == 0){
                     d.setFullYear(d.getFullYear() - 1, 11);
                 }
                 else{
