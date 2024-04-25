@@ -34,12 +34,19 @@
     box-shadow: 0 0 4px rgba(0, 0, 0, .5);
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 h1 {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     color: #000000;
-    font-size: 200%;
-  }
+    margin: 10px;
+    }
   /* For some reason, 
   doing h1.CalendarTitle{} or .CalendarTitle{}
   won't apply the big logo and font
