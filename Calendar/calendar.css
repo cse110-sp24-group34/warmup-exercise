@@ -40,7 +40,22 @@
     width: 80%;
     position: relative;
     left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
 }
+
+/* datetable tr td:nth-child(even) {color: purple ;} */
+
+date { 
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    position: relative ;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+  } 
 
 /* centers days */
 .day {

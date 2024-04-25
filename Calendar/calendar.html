@@ -95,8 +95,6 @@
                 </tr>
             </table>
         </div>
-<<<<<<< Updated upstream
-=======
         <!-- Calendar Structure end -->
 
         <!-- Prev and Next Button Functionality -->
@@ -139,6 +137,11 @@
                 for(row; row < 6; row = row + 1){
                     let Cell = document.getElementById("datetable").rows[row].cells;
                     while(dayNumber < 7 && ((month==1 && year%4==0) ? date <= 29 : date <= daysPerMonth[month])){
+                        // check day, leap year
+                        if( month != d.getMonth()  ){
+                            Cell[dayNumber].innerHTML = <p style = "color:Tomato"></p>;
+                        }
+                        // the cells change on the date number
                         Cell[dayNumber].innerHTML = date;
                         date = date + 1;
                         dayNumber = dayNumber + 1;
@@ -169,7 +172,7 @@
                     d.setFullYear(d.getFullYear() - 1, 11);
                 }
                 else{
-                    d.setMonth(d.getMonth()-1);
+                    d.setMonth(d.getMonth() - 1);
                 }
                 setCalendar(d);
             }
@@ -179,7 +182,6 @@
           </script>
 
     </div>
->>>>>>> Stashed changes
     
 </body>
 </html>
