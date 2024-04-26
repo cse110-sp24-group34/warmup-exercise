@@ -7,22 +7,23 @@ window.onload = function() {
 };
 
 
-function setCalendar(d){
+// var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     
-    var row = 0;
-    for(row; row < 6; row = row + 1){
-        let Cell = document.getElementById("datetable").rows[row].cells;
-        var col = 0;
-        while(col < 7){
-            Cell[col].innerHTML = "";
-            Cell[col].classList.remove("prevMonth");
-            col = col + 1;
-        }
+// function setCalendar(d){
+    
+//     var row = 0;
+//     for(row; row < 6; row = row + 1){
+//         let Cell = document.getElementById("datetable").rows[row].cells;
+//         var col = 0;
+//         while(col < 7){
+//             Cell[col].innerHTML = "";
+//             Cell[col].classList.remove("prevMonth");
+//             col = col + 1;
+//         }
     }
 
-    var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     
     // Get the day of the week
     var dayNumber = d.getDay()

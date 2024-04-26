@@ -20,6 +20,37 @@
     
 }
 .dayButton {
+    /*
+    button surrounding each day, is invisible
+    */
+    font-family: "Poppins", sans-serif;
+    font-size: 100%;
+    background: transparent;
+    border: none ;
+    color: rgb(0, 0, 0);
+    outline: 0;
+    padding: 0% 50% 5% 0% ;
+    position: relative;
+}
+
+
+.buttonReminder {
+    /*
+    1
+    ---> TEXT
+    */
+    display:inline-block;
+    word-wrap: break-word !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8vh;
+    padding-right: 170px;
+    padding-bottom: 100px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    line-height: .5;
+    /* figure out how to make it collide with the boxes on the side */
+}
+.dayButton {
     font-family: "Poppins", sans-serif;
     font-size: 100%;
     background: transparent;
@@ -66,6 +97,7 @@ h1 {
   the title, but if this does be an issue, should fix it
   will not put in issues tab though!
    */
+
 /* makes days horizontal */
 .days {
     /*Sun, Mon,*/
@@ -84,7 +116,6 @@ h1 {
 }
 
 date { 
-    
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     position: relative ;
@@ -105,9 +136,20 @@ date {
     
 }
 
+.reminders {
+    text-align: center;
+    padding: 4%;
+    font-size: 170%;
+    color:rgb(51, 47, 47);
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    
+}
+
 
 table {
     /*Boxes around 1,2,3...*/
+    word-wrap: break-word;
     font-family: 'Courier New', Courier, monospace;
     border-collapse: collapse;
     border-radius: 200px;
@@ -115,11 +157,13 @@ table {
     position: relative;
     left: 10%;
     height: 50%;
+    
 
 }
   
 td, th {
     /* 1,2,3 */
+    word-wrap: break-word;
     font-family: "Poppins", sans-serif;
     font-weight:bold;
     font-size: 100%;
@@ -133,7 +177,8 @@ td, th {
     height: 800%;
 }
 
-.dayButton{
+/* Determine if this is needed or not */
+/* .dayButton{
     font-weight:bold;
     margin-left: 10px;
     margin-top: 10px;
@@ -151,7 +196,7 @@ td, th {
     color: #b9b7b7;
 
 
-}
+} */
 
 #month{
     font-size: 200%;
@@ -160,6 +205,10 @@ td, th {
  
 }
 
+
+.prevMonth {
+    color: #b9b7b7;
+}
 
 #year {
     font-family: "Poppins", sans-serif;

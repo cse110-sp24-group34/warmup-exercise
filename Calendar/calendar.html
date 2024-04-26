@@ -102,12 +102,20 @@
             <br>
             <br>
         </div>
-=======
         <!-- Calendar Structure end -->
        
         <!-- Prev and Next Button Functionality -->
         <!-- <script>
-            function setCalendar(d){
+
+        <!-- Calendar Structure end -->
+       
+        <!-- Prev and Next Button Functionality -->
+        <script>
+            var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+                
+            function setCalendar(d) {
                 var row = 0;
                 for(row; row < 6; row = row + 1){
                     let Cell = document.getElementById("datetable").rows[row].cells;
@@ -120,13 +128,14 @@
                     dayNumber = 0;
                     
                 }
+            }
 
-                var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-                var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+                // var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                // var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                // var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
                 
                 // Get the day of the week
-                var dayNumber = d.getDay()
+                var dayNumber = d.getDay();
 
                 var row = 0;
                 var date = 1;
@@ -148,17 +157,24 @@
 
 
                 for(row; row < 6; row = row + 1){
-                    let Cell = document.getElementById("datetable").rows[row].cells;
+                    var Cell = document.getElementById("datetable").rows[row].cells;
                     while(dayNumber < 7 && ( (month == 1 && year % 4 == 0) ? date <= 29 : date <= daysPerMonth[month]) ){
-//                        dayNumber++;
-                    //   Cell[dayNumber].innerHTML = 
-                    //   <a style = "color:Red"></a>;
+                        
+                     //  Cell[dayNumber].innerHTML = 
+                     //  <a style = "color:Red"></a>;
                         
                         // The above code allows you to have previous dates in the calendar 
                         // as another color
                         // However, the current month will not load unless you the side arrows again
+
                         Cell[dayNumber].innerHTML = 
-                            "<button class='dayButton' onClick = 'TextBox()' >" + date + "</button>";
+                            "<button class='dayButton' id='ButtonDay' onClick = 'TextBox(this, datecounter)' >" 
+                            + date + "</button>" +
+                            "<p class = 'buttonReminder' id ='reminders" 
+                            + monthsOfYear[month]+ "-" + date + "-" + year
+                            + "'></p>"; 
+                            // this allows me to create a individual id for each date and button
+                            
                         date = date + 1;
                         dayNumber = dayNumber + 1;
 //                        Cell[dayNumber].innerHTML = <a></a>;
@@ -166,12 +182,13 @@
                     }
                     dayNumber = 0;
                 }
+               
                 // Changes value of month and year headers
                 let monthElement = document.getElementById("month");
                 monthElement.innerHTML = monthsOfYear[month];
                 let yearElement = document.getElementById("year");
                 yearElement.innerHTML = year;
-            }
+            
 
 
             function incrementMonth(d){
@@ -194,15 +211,29 @@
                 setCalendar(d);
             }
 
-             function TextBox() {
-                let input = prompt("hey!") 
-             }
+             function TextBox(buttonself, d) {
+                //"<p id ='reminders'></p>" 
+                let textContent = "";
+                h = prompt("What do you need to do on "+ document.getElementById("month").textContent 
+                +" "+ buttonself.textContent +", "+d.getFullYear()+"?", textContent);
+                textContent = h;
+                // you NEED the above code, otherwise it will rewrite over each time 
+                document.getElementById(
+                    "reminders" + 
+                    document.getElementById("month").textContent+ "-" 
+                    +buttonself.textContent+"-"+d.getFullYear() ).innerHTML
+                    = textContent;               
+                    /*
+                    The above code allows me to grab each individual button being clicked
+                    and pull the individual date and ID and corresponds to that text.
+                    */
+            }
 
             setCalendar(datecounter);
             
           </script>
 
-    </div> -->
+    </div>
     
 </body>
 </html>
