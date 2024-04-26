@@ -84,7 +84,6 @@ h1 {
 }
 
 date { 
-    
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     position: relative ;
@@ -115,6 +114,7 @@ table {
     position: relative;
     left: 10%;
     height: 50%;
+    
 
 }
   
@@ -133,26 +133,6 @@ td, th {
     height: 800%;
 }
 
-.dayButton{
-    font-weight:bold;
-    margin-left: 10px;
-    margin-top: 10px;
-
-}
-
-.prevdayButton{
-    font-weight:bold;
-    margin-left: 10px;
-    margin-top: 10px;
-    font-family: "Poppins", sans-serif;
-    background-color: transparent;
-    border: none;
-    font-size: 100%;
-    color: #b9b7b7;
-
-
-}
-
 #month{
     font-size: 200%;
     text-align: center;
@@ -161,11 +141,12 @@ td, th {
 }
 
 
+.prevMonth {
+    color: #b9b7b7;
+}
+
 #year {
     font-family: "Poppins", sans-serif;
     text-align: center;
     font-size: 400%;
 }
-
-
-

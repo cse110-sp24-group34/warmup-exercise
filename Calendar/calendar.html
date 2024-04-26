@@ -103,7 +103,7 @@
         <!-- Calendar Structure end -->
        
         <!-- Prev and Next Button Functionality -->
-        <!-- <script>
+        <script>
             function setCalendar(d){
                 var row = 0;
                 for(row; row < 6; row = row + 1){
@@ -129,37 +129,21 @@
                 var date = 1;
                 var month = d.getMonth();
                 var year = d.getFullYear();
-
-                // Logic for gray days
-                // var prevMonth = month === 0 ? 11 : month - 1;
-                // var prevMonthDays = daysPerMonth[prevMonth];
-                // var prevMonthStartDay = prevMonthDays - (dayNumber - 1);
-
-                // // Sets gray days
-                // for (let i = 0; i < dayNumber; i++) {
-                //     let prevMonthDay = prevMonthStartDay + i;
-                //     document.getElementById("datetable").rows[0].cells[i].innerHTML = prevMonthDay;
-                //     document.getElementById("datetable").rows[0].cells[i].classList.add("prevMonth");
-                // }
-                
-
-
                 for(row; row < 6; row = row + 1){
                     let Cell = document.getElementById("datetable").rows[row].cells;
                     while(dayNumber < 7 && ( (month == 1 && year % 4 == 0) ? date <= 29 : date <= daysPerMonth[month]) ){
-//                        dayNumber++;
-                    //   Cell[dayNumber].innerHTML = 
-                    //   <a style = "color:Red"></a>;
+                        
+                     //  Cell[dayNumber].innerHTML = 
+                     //  <a style = "color:Red"></a>;
                         
                         // The above code allows you to have previous dates in the calendar 
                         // as another color
                         // However, the current month will not load unless you the side arrows again
                         Cell[dayNumber].innerHTML = 
-                            "<button class='dayButton' onClick = 'TextBox()' >" + date + "</button>";
+                            "<button class='dayButton' onClick = 'TextBox()' >" +
+    date + "</button>";
                         date = date + 1;
                         dayNumber = dayNumber + 1;
-//                        Cell[dayNumber].innerHTML = <a></a>;
-
                     }
                     dayNumber = 0;
                 }
@@ -199,7 +183,7 @@
             
           </script>
 
-    </div> -->
+    </div>
     
 </body>
 </html>
