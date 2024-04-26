@@ -125,16 +125,6 @@
                 // Get the day of the week
                 var dayNumber = d.getDay()
 
-                /*var todayD = d.getDate()
-                while(todayD > 1){
-                    todayD = todayD - 1;
-                    if(dayNumber > 0){
-                        dayNumber = dayNumber - 1;
-                    }
-                    else{
-                        dayNumber = 6;
-                    }
-                } */
                 var row = 0;
                 var date = 1;
                 var month = d.getMonth();
@@ -143,12 +133,15 @@
                     let Cell = document.getElementById("datetable").rows[row].cells;
                     while(dayNumber < 7 && ( (month == 1 && year % 4 == 0) ? date <= 29 : date <= daysPerMonth[month]) ){
                         
-                    //   Cell[dayNumber].innerHTML = <a style = "color:Red"></a>;
+                     //  Cell[dayNumber].innerHTML = 
+                     //  <a style = "color:Red"></a>;
                         
                         // The above code allows you to have previous dates in the calendar 
                         // as another color
                         // However, the current month will not load unless you the side arrows again
-                        Cell[dayNumber].innerHTML = date;
+                        Cell[dayNumber].innerHTML = 
+                            "<button class='dayButton' onClick = 'TextBox()' >" +
+    date + "</button>";
                         date = date + 1;
                         dayNumber = dayNumber + 1;
                     }
@@ -181,6 +174,10 @@
                 }
                 setCalendar(d);
             }
+
+             function TextBox() {
+                let input = prompt("hey!") 
+             }
 
             setCalendar(datecounter);
             
