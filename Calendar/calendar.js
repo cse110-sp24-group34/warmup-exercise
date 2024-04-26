@@ -1,6 +1,9 @@
 var datecounter = new Date();
 datecounter.setDate(1);
-
+var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+    
 function setCalendar(d){
     
     var row = 0;
@@ -14,9 +17,6 @@ function setCalendar(d){
         }
     }
 
-    var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     
     // Get the day of the week
     var dayNumber = d.getDay()

@@ -104,6 +104,10 @@
        
         <!-- Prev and Next Button Functionality -->
         <script>
+            var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+                
             function setCalendar(d){
                 var row = 0;
                 for(row; row < 6; row = row + 1){
@@ -118,9 +122,9 @@
                     
                 }
 
-                var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-                var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+                // var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                // var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                // var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
                 
                 // Get the day of the week
                 var dayNumber = d.getDay()
@@ -140,8 +144,8 @@
                         // as another color
                         // However, the current month will not load unless you the side arrows again
                         Cell[dayNumber].innerHTML = 
-                            "<button class='dayButton' onClick = 'TextBox()' >" +
-    date + "</button>";
+                            "<button class='dayButton' id='ButtonDay' onClick = 'TextBox(this, datecounter)' >" 
+                            + date + "</button>";
                         date = date + 1;
                         dayNumber = dayNumber + 1;
                     }
@@ -175,9 +179,13 @@
                 setCalendar(d);
             }
 
-             function TextBox() {
-                let input = prompt("hey!") 
-             }
+             function TextBox(buttonself, d) {
+                let textContent = "Type something here!";
+                h = prompt("On "+ document.getElementById("month").textContent 
+                +" "+ buttonself.textContent +", "+d.getFullYear()+":", textContent);
+                textContent = h;
+                
+            }
 
             setCalendar(datecounter);
             
