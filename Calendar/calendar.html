@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="calendar.css">
+    <link rel="icon" href="TGSolidIcon.png" type="image/png">
+
     <script src="calendar.js"></script>
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,17 +17,20 @@
 
 <body>
 
-    <h1 class = "title">Calendar</h1>
-    <br>
+    <h1 class = "CalendarTitle">
+        <a href="https://github.com/cse110-sp24-group34/warmup-exercise/tree/main/Calendar"><img src="..\Calendar\TGSolidIcon.png" alt="Project Touch Grass Logo" width = "40" height ="40"></a>
+        Calendar
+    </h1>
+    
     <hr>
     <br>
 
     <div class="Calendar">
         <h2 id="year">2024</h2>
         <div class = "header">
-            <button onclick="decrementMonth(datecounter)" class="Previous">&lt;</button>
-            <h2 id="month">March</h2>
-            <button onclick="incrementMonth(datecounter)" class="Right">&gt;</button>
+            <button onclick= decrementMonth(datecounter) id = "Previous" class="Previous">&lt;</button>
+            <h2 id="month">April</h2>
+            <button onclick= incrementMonth(datecounter) id = "Right" class="Right">&gt;</button>
         </div>
 
         <div class = "days">
@@ -94,12 +99,14 @@
                     <th></th>
                 </tr>
             </table>
+            <br>
+            <br>
         </div>
 =======
         <!-- Calendar Structure end -->
-
+       
         <!-- Prev and Next Button Functionality -->
-        <script>
+        <!-- <script>
             function setCalendar(d){
                 var row = 0;
                 for(row; row < 6; row = row + 1){
@@ -121,31 +128,44 @@
                 // Get the day of the week
                 var dayNumber = d.getDay()
 
-                /*var todayD = d.getDate()
-                while(todayD > 1){
-                    todayD = todayD - 1;
-                    if(dayNumber > 0){
-                        dayNumber = dayNumber - 1;
-                    }
-                    else{
-                        dayNumber = 6;
-                    }
-                } */
                 var row = 0;
                 var date = 1;
                 var month = d.getMonth();
                 var year = d.getFullYear();
+
+                // Logic for gray days
+                // var prevMonth = month === 0 ? 11 : month - 1;
+                // var prevMonthDays = daysPerMonth[prevMonth];
+                // var prevMonthStartDay = prevMonthDays - (dayNumber - 1);
+
+                // // Sets gray days
+                // for (let i = 0; i < dayNumber; i++) {
+                //     let prevMonthDay = prevMonthStartDay + i;
+                //     document.getElementById("datetable").rows[0].cells[i].innerHTML = prevMonthDay;
+                //     document.getElementById("datetable").rows[0].cells[i].classList.add("prevMonth");
+                // }
+                
+
+
                 for(row; row < 6; row = row + 1){
                     let Cell = document.getElementById("datetable").rows[row].cells;
-                    while(dayNumber < 7 && ((month==1 && year%4==0) ? date <= 29 : date <= daysPerMonth[month])){
-                        Cell[dayNumber].innerHTML = date;
+                    while(dayNumber < 7 && ( (month == 1 && year % 4 == 0) ? date <= 29 : date <= daysPerMonth[month]) ){
+//                        dayNumber++;
+                    //   Cell[dayNumber].innerHTML = 
+                    //   <a style = "color:Red"></a>;
+                        
+                        // The above code allows you to have previous dates in the calendar 
+                        // as another color
+                        // However, the current month will not load unless you the side arrows again
+                        Cell[dayNumber].innerHTML = 
+                            "<button class='dayButton' onClick = 'TextBox()' >" + date + "</button>";
                         date = date + 1;
                         dayNumber = dayNumber + 1;
+//                        Cell[dayNumber].innerHTML = <a></a>;
+
                     }
                     dayNumber = 0;
-                    
                 }
-
                 // Changes value of month and year headers
                 let monthElement = document.getElementById("month");
                 monthElement.innerHTML = monthsOfYear[month];
@@ -153,8 +173,9 @@
                 yearElement.innerHTML = year;
             }
 
+
             function incrementMonth(d){
-                if(d.getMonth == 11){
+                if(d.getMonth() == 11){
                     d.setFullYear(d.getFullYear() + 1, 0);
                 }
                 else{
@@ -164,20 +185,24 @@
             }
 
             function decrementMonth(d){
-                if(d.getMonth == 0){
+                if(d.getMonth() == 0){
                     d.setFullYear(d.getFullYear() - 1, 11);
                 }
                 else{
-                    d.setMonth(d.getMonth()-1);
+                    d.setMonth(d.getMonth() - 1);
                 }
                 setCalendar(d);
             }
+
+             function TextBox() {
+                let input = prompt("hey!") 
+             }
 
             setCalendar(datecounter);
             
           </script>
 
-    </div>
-
+    </div> -->
+    
 </body>
 </html>

@@ -1,6 +1,12 @@
 var datecounter = new Date();
 datecounter.setDate(1);
 
+//Populate the calendar with the current month
+window.onload = function() {
+    setCalendar(datecounter);
+};
+
+
 function setCalendar(d){
     
     var row = 0;
@@ -31,14 +37,14 @@ function setCalendar(d){
 
     for (let i = 0; i < dayNumber; i++) {
         let prevMonthDay = prevMonthStartDay + i;
-        document.getElementById("datetable").rows[0].cells[i].innerHTML = prevMonthDay;
+        document.getElementById("datetable").rows[0].cells[i].innerHTML = "<button class='prevdayButton' onClick = 'TextBox()' >" + prevMonthDay + "</button>";
         document.getElementById("datetable").rows[0].cells[i].classList.add("prevMonth");
     }
 
     for(row; row < 6; row = row + 1){
         let Cell = document.getElementById("datetable").rows[row].cells;
         while(dayNumber < 7 && ((month==1 && year%4==0) ? date <= 29 : date <= daysPerMonth[month])){
-            Cell[dayNumber].innerHTML = date;
+            Cell[dayNumber].innerHTML = "<button class='dayButton' onClick = 'TextBox()' >" + date + "</button>";
             date = date + 1;
             dayNumber = dayNumber + 1;
         }
@@ -54,22 +60,26 @@ function setCalendar(d){
     
 function incrementMonth(d){
     if(d.getMonth == 11){
-        d.setFullYear(d.getFullYear()+1, 0);
+        d.setFullYear(d.getFullYear() + 1, 0);
     }
     else{
-        d.setMonth(d.getMonth()+1);
+        d.setMonth(d.getMonth() + 1);
     }
     setCalendar(d);
 }
 
 function decrementMonth(d){
     if(d.getMonth == 0){
-        d.setFullYear(d.getFullYear()-1, 11);
+        d.setFullYear(d.getFullYear() - 1, 11);
     }
     else{
-        d.setMonth(d.getMonth()-1);
+        d.setMonth(d.getMonth() - 1);
     }
     setCalendar(d);
+}
+
+function TextBox() {
+    let input = prompt("hey!") 
 }
 
 setCalendar(datecounter);
