@@ -20,6 +20,9 @@
     
 }
 .dayButton {
+    /*
+    button surrounding each day, is invisible
+    */
     font-family: "Poppins", sans-serif;
     font-size: 100%;
     background: transparent;
@@ -30,6 +33,26 @@
     position: relative;
 }
 
+
+.buttonReminder {
+    /*
+    1
+    ---> TEXT
+    */
+    overflow-wrap: break-word;
+    inline-size: 1fr;  
+    word-wrap: break-word !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 40%;
+    background: transparent;
+    border: none;
+    width: 1fr;
+    padding-right: 170px;
+    padding-bottom: 100px;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    overflow: hidden;
+}
 
 /* button adjustments */
 .header button {
@@ -58,14 +81,7 @@ h1 {
     color: #000000;
     margin: 10px;
     }
-  /* For some reason, 
-  doing h1.CalendarTitle{} or .CalendarTitle{}
-  won't apply the big logo and font
-  I've added it to h1 instead, and it shouldn't be 
-  an issue since we're only using it on 
-  the title, but if this does be an issue, should fix it
-  will not put in issues tab though!
-   */
+
 /* makes days horizontal */
 .days {
     /*Sun, Mon,*/
@@ -104,9 +120,20 @@ date {
     
 }
 
+.reminders {
+    text-align: center;
+    padding: 4%;
+    font-size: 170%;
+    color:rgb(51, 47, 47);
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    
+}
+
 
 table {
     /*Boxes around 1,2,3...*/
+    word-wrap: break-word;
     font-family: 'Courier New', Courier, monospace;
     border-collapse: collapse;
     border-radius: 200px;
@@ -120,6 +147,7 @@ table {
   
 td, th {
     /* 1,2,3 */
+    word-wrap: break-word;
     font-family: "Poppins", sans-serif;
     font-weight:bold;
     font-size: 100%;
