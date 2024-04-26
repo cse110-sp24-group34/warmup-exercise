@@ -22,7 +22,7 @@ window.onload = function() {
 //             Cell[col].classList.remove("prevMonth");
 //             col = col + 1;
 //         }
-    }
+//    }
 
     
     // Get the day of the week
@@ -56,7 +56,7 @@ window.onload = function() {
     monthElement.innerHTML = monthsOfYear[month];
     let yearElement = document.getElementById("year");
     yearElement.innerHTML = year;
-}
+
 
     
 function incrementMonth(d){
