@@ -150,6 +150,7 @@
                             "<p class = 'buttonReminder' id ='reminders" 
                             + monthsOfYear[month]+ "-" + date + "-" + year
                             + "'></p>"; 
+                            
                             // this allows me to create a individual id for each date and button
                             
                         date = date + 1;
@@ -191,13 +192,18 @@
                 h = prompt("What do you need to do on "+ document.getElementById("month").textContent 
                 +" "+ buttonself.textContent +", "+d.getFullYear()+"?", textContent);
                 textContent = h;
-                // you NEED the above code, otherwise it will rewrite over each time 
-                document.getElementById(
-                    "reminders" + 
+                let dateElement = "reminders" + 
                     document.getElementById("month").textContent+ "-" 
-                    +buttonself.textContent+"-"+d.getFullYear() ).innerHTML
-                    = textContent;               
-                    /*
+                    +buttonself.textContent+"-"+d.getFullYear();
+                // you NEED the above code, otherwise it will rewrite over each time 
+                 document.getElementById(dateElement ).innerHTML = textContent;              
+                // let docElement = document.getElementById(dateElement); // this is the element of the whole doc
+                // let trElement = docElement.parentNode.parentNode; // this one is the th above,
+                // docElement.style.width = docElement.parentNode.parentNode.offsetWidth+"px";
+                // docElement.style.height = docElement.parentNode.parentNode.offsetHeight+"px";
+                    // document.getElementById("month").textContent+ "-" 
+                    // +buttonself.textContent+"-"+d.getFullYear() .parentNode.parentNode.width =  ;
+                     /*
                     The above code allows me to grab each individual button being clicked
                     and pull the individual date and ID and corresponds to that text.
                     */

@@ -42,12 +42,14 @@
     display:inline-block;
     word-wrap: break-word !important;
     font-family: "Poppins", sans-serif;
-    font-size: 1.8vh;
+    font-size: 1.3vh;
     padding-right: 170px;
     padding-bottom: 100px;
     color: rgb(0, 0, 0);
     position: absolute;
     line-height: .5;
+    width: 1fr;
+    height: .1fr;
     /* figure out how to make it collide with the boxes on the side */
 }
 
@@ -155,7 +157,8 @@ td, th {
     position: relative;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(7, 1fr);
-    height: 800%;
+    white-space: normal;
+    /* height: 800%; */
 }
 
 #month{
