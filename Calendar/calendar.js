@@ -22,7 +22,7 @@ window.onload = function() {
 //             Cell[col].classList.remove("prevMonth");
 //             col = col + 1;
 //         }
-    // }
+//    }
 
     
     // Get the day of the week
