@@ -187,7 +187,7 @@
 
              function TextBox(buttonself, d) {
                 //"<p id ='reminders'></p>" 
-                let textContent = "Type!";
+                let textContent = "";
                 h = prompt("What do you need to do on "+ document.getElementById("month").textContent 
                 +" "+ buttonself.textContent +", "+d.getFullYear()+"?", textContent);
                 textContent = h;
@@ -201,8 +201,6 @@
                     The above code allows me to grab each individual button being clicked
                     and pull the individual date and ID and corresponds to that text.
                     */
-                // this will not work if increment or decrement, because each time 
-                // it just resets the d in date thing
             }
 
             setCalendar(datecounter);

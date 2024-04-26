@@ -39,19 +39,16 @@
     1
     ---> TEXT
     */
-    overflow-wrap: break-word;
-    inline-size: 1fr;  
+    display:inline-block;
     word-wrap: break-word !important;
     font-family: "Poppins", sans-serif;
-    font-size: 40%;
-    background: transparent;
-    border: none;
-    width: 1fr;
+    font-size: 1.8vh;
     padding-right: 170px;
     padding-bottom: 100px;
     color: rgb(0, 0, 0);
     position: absolute;
-    overflow: hidden;
+    line-height: .5;
+    /* figure out how to make it collide with the boxes on the side */
 }
 
 /* button adjustments */
