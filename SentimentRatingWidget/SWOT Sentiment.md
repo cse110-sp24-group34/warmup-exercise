@@ -23,7 +23,7 @@
 ### Opportunities
 - **Skill Development:** This project provides an excellent opportunity for all team members, especially beginners, to enhance their coding skills in a real-world scenario.
 - **Process Improvement:** Future projects can benefit from the learnings of this one, particularly in refining the agile methodologies used.
-- **Timeline Improvemnts:** Learning from this project to better estimate the time each phase will take the team.
+- **Timeline Improvements:** Learning from this project to better estimate the time each phase will take the team.
 
 ### Threats
 - **Critical team member sick:** Due to the uneven level of skill team members had with technologies like JavaScript, having the few team members that are competent in JS sick could heavily hinder progress.
