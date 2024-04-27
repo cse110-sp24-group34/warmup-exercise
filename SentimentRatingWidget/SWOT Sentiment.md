@@ -1,7 +1,7 @@
 # Project Review and SWOT Analysis
 
 ## Process Review
-- **Planning Phase:** The team efficiently established roles and responsibilities based on individual skills. Our team consists of Derrick, Austin, and Neo.
+- **Planning Phase:** The team efficiently established roles and responsibilities based on individual skills. Our team consists of Derrick, Alex, Austin, and Neo.
 - **Development Phase:** Framework of basic Widget completed first with additions in style and features later on.
 - **Review Phase:** Regular code reviews were conducted to maintain code quality and integrate different parts seamlessly. All code is commented based on functionality.
 
