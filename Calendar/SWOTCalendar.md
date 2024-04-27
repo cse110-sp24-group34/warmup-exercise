@@ -3,61 +3,54 @@
 ## Process Review
 - **Planning Phase:** Our team consists of Sumukh, Mauricio, Ryan, Jeffery, Can. We decided to delegate based on what we felt we could maximise efficiency.
 - **Development Phase:** 
- <!-- Framework of basic Widget completed first with additions in style and features later on. -->
+  Building the basic calendar took the most time, with styling and additional features like our stylized font and logo completed towards the end.
 - **Review Phase:** 
-<!--- Regular code reviews were conducted to maintain code quality and integrate different parts seamlessly. All code is commented based on functionality. --->
-
+  We had made seperate branches to make sure that nothing would break, as well as put issues in the code review. We had left comments on the CSS and JavaScript to make sure that as more pieces were added, it was able to be maintained.
 ## To-do:
 - [x] Implement the table
 - [x] Keep track of current date, put into Calendar
-- [X] Add the Touch Grass Logo !
-- [ ] Make the dates clickable!
+- [X] Add the Touch Grass Logo!
+- [X] Make the dates clickable!
 - [x] Add a button that changes month (i.e, left and right)
 - [x] Leap years... 
-- [X] Implement some CSS!
-- [ ] Implement removing bottom row if no dates?
-
-<!-- 
-- [ ]
-- [ ]
- -->
+- [X] Implement some CSS and make it look pretty!
 ## SWOT Analysis
 
 ### Strengths
 - **Team Collaboration:** 
-  <!-- Strong communication and collaborative problem-solving skills were evident, leading to effective troubleshooting and innovation (Took ideas from 4/18 lecture). -->
+  Strong team collaboration due to partner programming were evident, leading to exchanged ideas and more efficient debugging. 
  **Adaptability:**
-  <!-- We had discussed our unfamiliarity with JavaScript, but quickly set out to improve our knowledge with tutorials online and traded tips and advice when we were stuck. -->
+ We were not too familar with HTML other than what was in the lab, but sharing online resources like tutorials and sharing advice or the bugs we were facing helped a lot. 
 
 ### Weaknesses
 - **Uneven Skill Distribution:** 
-  <!-- Some team members did not have great experience with CSS & JacaScript, which took longer than expected to assign everybdoy to appropiate parts. -->
+  Not everybody had web development experience, which led to some having to do work asynchronously to catch up/watch tutorials.
 - **Time Management:** 
+  Towards the beginning was mostly planning and how to execute it, and towards the end we kicked it into high gear. Most of the practical work was towards the end of the calendar.
   <!-- Initial phases took longer than expected, putting pressure on later stages of the project timeline. -->
 
 ### Opportunities
 - **Skill Development:**
-   <!-- This project provides an excellent opportunity for all team members, especially beginners, to enhance their coding skills in a real-world scenario. -->
+  The calendar provided a great window into web development, allowing us to develop our skills in HTML and CSS greatly, that could benefit us in a workplace.
 - **Process Improvement:** 
-<!-- Future projects can benefit from the learnings of this one, particularly in refining the agile methodologies used. -->
+  I think we could pair up partners next time to program, maybe like partner programming. Maybe one from Sentiment team and one from Calendar team, but we could also work on our Agile framework and improve on it.
 - **Timeline Improvemnts:** 
-<!-- Learning from this project to better estimate the time each phase will take the team. -->
+  Now that we know the capabilities of the members, we can better delegate responsibilities. If one member has more experience in JS for example, we can partner pair them up with someone who has no experience at all.
 
 ### Threats
-- **Critical team member sick:**
- <!-- Due to the uneven level of skill team members had with technologies like JavaScript, having the few team members that are competent in JS sick could heavily hinder progress. -->
-- 
+- **Can lost his phone**
+  Can got his phone robbed and was unable to be online for a few days while he got a replacement. He was unable to access Duo and was essentially locked out of all his information. 
 
 ## Summary of Learnings
 
 - **Technical Skills:** 
-  <!-- Gained substantial hands-on experience with HTML, CSS, and JavaScript. Learned the importance of clean, maintainable code. -->
+  Learned a lot about HTML, CSS, JavaScript, and version-based controls. Learned how to rollback a push as well as pulling and branching.
 - **Team Dynamics:**
- <!-- Learned that clear communication and regular feedback are crucial for team synergy and project success. -->
+  We learned who was more efficient at writing clean code, as well who could write in Markdown the best. We had cleaned it up together with whoever we delegated to the task and realized that feedback is very important when there is a bug as well as comments that are descriptive.
 - **Project Management:**
- <!-- Recognized the importance of agile project management techniques in managing software development projects effectively. -->
+  The importance of an agile framework is not to be understated, it helped a lot in realizing our goals and realizations on what to do.
 - **Personal Growth:**
- <!-- Improved problem-solving skills and learned to adapt quickly to new challenges. -->
+  All of our skills with HTML and Git/GitHub certainly improved, as well as our team communication. It was rocky at first, but we soon realized what worked like telling the team immediately as soon as there was an issue.
 
 ## Conclusion
-<!-- This project not only enhanced our technical skills but also provided deep insights into effective team management and the importance of a balanced project approach. The experience has prepared us better for future collaborative projects and highlighted areas for personal and team improvement. -->
+Creating the calendar not only helped us improve our communication skills, but it also improved our techinical skills by allowing to experiment with new CSS and HTML skills. It has taught us the importance of collaborative feedback, as well as our pain areas for improvement that we can better on next time.
