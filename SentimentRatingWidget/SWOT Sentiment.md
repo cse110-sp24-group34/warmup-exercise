@@ -8,7 +8,7 @@
 ## To-do:
 - [ ] comment code functionality
 - [x] implement into web browser
-- [ ] record video
+- [x] record video
 
 ## SWOT Analysis
 
