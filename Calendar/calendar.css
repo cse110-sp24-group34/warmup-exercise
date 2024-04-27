@@ -19,20 +19,6 @@
     margin:0.5em;
     
 }
-.dayButton {
-    /*
-    button surrounding each day, is invisible
-    */
-    font-family: "Poppins", sans-serif;
-    font-size: 100%;
-    background: transparent;
-    border: none ;
-    color: rgb(0, 0, 0);
-    outline: 0;
-    padding: 0% 50% 5% 0% ;
-    position: relative;
-}
-
 
 .buttonReminder {
     /*
@@ -57,8 +43,7 @@
     border: none ;
     color: rgb(0, 0, 0);
     outline: 0;
-    padding: 0% 50% 5% 0% ;
-    position: relative;
+    position: static;
 }
 
 
@@ -109,7 +94,7 @@ h1 {
     right: 10%;
     top: 10%;
     bottom: 100%;
-    font-size: 2.0vw;
+    font-size: 0.8vw;
     /*
     fontsize stays proprtional to the height of the viewport (size)
     */
@@ -154,27 +139,33 @@ table {
     border-collapse: collapse;
     border-radius: 200px;
     width: 80%;
-    position: relative;
-    left: 10%;
+    position: static;
+    margin-left: 10%;
     height: 50%;
+    table-layout: fixed;
     
 
 }
-  
-td, th {
-    /* 1,2,3 */
+
+td{
+    border: 2px solid rgba(96, 96, 96, .6);
+    border-color: black;
+    border-radius: 200px;
+    position: static;
+}
+th{
+    border: 2px solid rgba(96, 96, 96, .6);
+    border-color: black;
+    border-radius: 200px;
     word-wrap: break-word;
     font-family: "Poppins", sans-serif;
     font-weight:bold;
     font-size: 100%;
-    border: 2px solid rgba(96, 96, 96, .6);
-    border-color: black;
-    border-radius: 200px;
-    padding: 0% 50% 5% 0% ; 
-    position: relative;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: repeat(7, 1fr);
-    height: 800%;
+    text-align:left;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-bottom: 5%;
+    height: 6em;
 }
 
 /* Determine if this is needed or not */
@@ -183,12 +174,11 @@ td, th {
     margin-left: 10px;
     margin-top: 10px;
 
-}
+} */
 
 .prevdayButton{
-    font-weight:bold;
-    margin-left: 10px;
-    margin-top: 10px;
+    font-weight:normal;
+    position: static;
     font-family: "Poppins", sans-serif;
     background-color: transparent;
     border: none;
@@ -196,7 +186,7 @@ td, th {
     color: #b9b7b7;
 
 
-} */
+}
 
 #month{
     font-size: 200%;

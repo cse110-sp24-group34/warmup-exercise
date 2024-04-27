@@ -1,28 +1,31 @@
 var datecounter = new Date();
 datecounter.setDate(1);
 
+//Create Hash Table
+var map = new Map();
+
 //Populate the calendar with the current month
 window.onload = function() {
     setCalendar(datecounter);
 };
 
 
-// var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-// var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-// var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
+var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     
-// function setCalendar(d){
+function setCalendar(d){
     
-//     var row = 0;
-//     for(row; row < 6; row = row + 1){
-//         let Cell = document.getElementById("datetable").rows[row].cells;
-//         var col = 0;
-//         while(col < 7){
-//             Cell[col].innerHTML = "";
-//             Cell[col].classList.remove("prevMonth");
-//             col = col + 1;
-//         }
-//    }
+    var row = 0;
+    for(row; row < 6; row = row + 1){
+        let Cell = document.getElementById("datetable").rows[row].cells;
+        var col = 0;
+        while(col < 7){
+            Cell[col].innerHTML = "";
+            Cell[col].classList.remove("prevMonth");
+            col = col + 1;
+        }
+   }
 
     
     // Get the day of the week
@@ -38,14 +41,14 @@ window.onload = function() {
 
     for (let i = 0; i < dayNumber; i++) {
         let prevMonthDay = prevMonthStartDay + i;
-        document.getElementById("datetable").rows[0].cells[i].innerHTML = "<button class='prevdayButton' onClick = 'TextBox()' >" + prevMonthDay + "</button>";
+        document.getElementById("datetable").rows[0].cells[i].innerHTML = "<button class='prevdayButton'>" + prevMonthDay + "</button>";
         document.getElementById("datetable").rows[0].cells[i].classList.add("prevMonth");
     }
 
     for(row; row < 6; row = row + 1){
         let Cell = document.getElementById("datetable").rows[row].cells;
         while(dayNumber < 7 && ((month==1 && year%4==0) ? date <= 29 : date <= daysPerMonth[month])){
-            Cell[dayNumber].innerHTML = "<button class='dayButton' onClick = 'TextBox()' >" + date + "</button>";
+            Cell[dayNumber].innerHTML = "<button class='dayButton' id=" + date + " onClick = 'TextBox(datecounter,this.id)' >" + date + "</button>";
             date = date + 1;
             dayNumber = dayNumber + 1;
         }
@@ -57,7 +60,7 @@ window.onload = function() {
     let yearElement = document.getElementById("year");
     yearElement.innerHTML = year;
 
-
+}
     
 function incrementMonth(d){
     if(d.getMonth == 11){
@@ -79,11 +82,10 @@ function decrementMonth(d){
     setCalendar(d);
 }
 
-function TextBox() {
-    let input = prompt("hey!") 
+function TextBox(d, date) {
+    var textBox = prompt("Log Entry: ", map.get((d.getFullYear() + d.getMonth() + date)));
+    map.set((d.getFullYear() + d.getMonth() + date),textBox);
 }
-
-setCalendar(datecounter);
 
 
 
