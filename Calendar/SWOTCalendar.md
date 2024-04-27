@@ -46,7 +46,7 @@
 - **Technical Skills:** 
   Learned a lot about HTML, CSS, JavaScript, and version-based controls. Learned how to rollback a push as well as pulling and branching.
 - **Team Dynamics:**
-  We learned who was more efficient at writing clean code, as well who could write in Markdown the best. We had cleaned it up together with whoever we delegated to the task and realized that feedback is very important when there is a bug as well as comments that are descriptive.
+  We learned who was more efficient at writing clean code, as well who could write in Markdown the best. We had cleaned it up together with whoever we delegated to the task and realized that feedback is very important when there is a bug as well as comments that are descriptive. We also learned the importance of not having everybody working on the same thing, since it could lead to wasted resources as well as conflicting implementations of ideas.
 - **Project Management:**
   The importance of an agile framework is not to be understated, it helped a lot in realizing our goals and realizations on what to do.
 - **Personal Growth:**
